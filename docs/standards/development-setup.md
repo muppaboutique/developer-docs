@@ -4,7 +4,7 @@ title: Standards - Development setup
 sidebar_label: Development setup
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/standards/development-setup.md
 ---
-import Alert from '../../../developer-site/src/components/Alert';
+import Alert from '@site/src/components/Alert';
 
 This page describes the process of how we set up development environments at Yoast.
 
