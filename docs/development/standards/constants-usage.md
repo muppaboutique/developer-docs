@@ -36,7 +36,7 @@ if ( $link->type === Link_Types::INTERNAL ) {
 }
 ```
 
-If a constant is only used within one class, you should place it inside that class, and mark it as @internal in the docblock.
+There is one exception to this rule. When adding a constant that is only used in a single class you should add it to that class. These constants should have a docblock marking them as @internal.
 
 For example:
 ```php
