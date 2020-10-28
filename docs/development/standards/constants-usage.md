@@ -7,9 +7,9 @@ custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/develo
 
 ## Constants usage
 
-In order to keep the usage of constants throughout our code base organised and easily accessible while at the same time ensuring classes don't have unnecessary dependencies on one another all constants should be cleanly separated into their own classes that can then be used wherever required.
+We want to keep the usage of constants throughout our code base organized and easy to understand. At the same time we want to ensure classes don't have unnecessary dependencies on one another. Therefore you should separate constants into their own class.
 
-Wrapping them in a class has the additional benefit of enabling autoloading for constants which ensures no additional setup is required and they are only loaded when necessary.
+Wrapping constants in a class has the additional benefit of enabling autoloading. This also means you need no additional setup to load them whenever required.
 
 All such wrapping classes should be added to the `src/constants` directory.
 
@@ -40,7 +40,7 @@ class Link_Types {
 }
 ```
 
-This class would then be used like this:
+You could then use this class like this:
 ```php
 use Yoast\WP\SEO\Constants\Link_Types;
 
@@ -49,7 +49,7 @@ if ( $link->type === Link_Types::INTERNAL ) {
 }
 ```
 
-There is one exception to this rule. If a constant is only used within one class, and possibly tests of that class, then it should be included within that class but the docblock should mark it as internal.
+There is one exception to this rule. When adding a constant that is only used in a single class you should add it to that class. These constants should have a docblock marking them as internal.
 
 For example:
 ```php
@@ -72,3 +72,7 @@ class Example {
     }
 }
 ```
+
+We also considered two other alternatives:
+1. Files including only namespaced constants without a wrapping class. However this would necessitate additional effort to load these files. Any usage would also lack the additional classname providing context to the constant's origins.
+2. Constants inside the classes where they were most used. This would create additional dependencies between classes. Which in turn could make refactoring and future changes more difficult and prone to errors.
