@@ -23,20 +23,7 @@ class Link_Types {
      */
     const INTERNAL = 'internal';
 
-    /**
-     * External links are links that direct to a different site, even if it is a subdomain, and are not images.
-     */
-    const EXTERNAL = 'external';
-
-    /**
-     * Internal images are images from the same site.
-     */
-    const INTERNAL_IMAGE = 'image-in';
-
-    /**
-     * External images are images from a different site.
-     */
-    const EXTERNAL_IMAGE = 'image-ex';
+    /* More constants here */
 }
 ```
 
@@ -49,7 +36,7 @@ if ( $link->type === Link_Types::INTERNAL ) {
 }
 ```
 
-There is one exception to this rule. When adding a constant that is only used in a single class you should add it to that class. These constants should have a docblock marking them as internal.
+If a constant is only used within one class, you should place it inside that class, and mark it as @internal in the docblock.
 
 For example:
 ```php
