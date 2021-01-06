@@ -11,6 +11,7 @@ We provide tools which allow users to declare special properties of links within
 
 ## Search engine guidelines
 Search engines typically require that links which are sponsored (or otherwise incentivised) - i.e., those bought/sold, placed in exchange for goods or services, or which are otherwise 'non-organic' - to be disclosed.
+
 To do this, a `rel` (relational) attribute with a value of `nofollow`, `sponsored` or `ugc` must be added to the anchor (`<a>`) tag in question.
 
 Our article, "[What are sponsored, nofollow and ugc links, and why use them?](https://yoast.com/outbound-link-sponsored-nofollow-ugc-attributes/)", describes the difference between these attributes.
