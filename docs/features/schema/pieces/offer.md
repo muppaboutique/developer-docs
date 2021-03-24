@@ -42,8 +42,6 @@ If the node is not output, any entities which would otherwise have referenced th
               "priceValidUntil": "2020-12-31",
               "priceSpecification": {
                   "@type": "PriceSpecification",
-                  "price": "22.00",
-                  "priceCurrency": "GBP",
                   "valueAddedTaxIncluded": "false"
               },
               "priceCurrency": "GBP",
