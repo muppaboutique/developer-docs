@@ -38,6 +38,7 @@ Optional properties which should only be output when the required criteria is me
 
 ### When the image has a HTML 'id' property
 * `url`: The URL of the image in the context of the current page; e.g., the page's canonical URL appended by the HTML `ID` property of the image (such as https://www.example.com/example-page/#image-123).
+* `contentUrl`: The contentUrl property more accurately describes/references the actual image resource than the url property. Technically, this means that we should alter any `url` keys on existing `imageObject` structures to instead use `contentUrl`. However, Google’s testing tools throw errors in some scenarios when the `url` property is missing (for `logo` and `primaryImageOfPage` in the SDTT, and `primaryImageOfPage` in the RRT). Therefore, we simply add a `contentUrl` property, with a value of the image URL.
 
 ### When both height and width dimensions are known
 * `height`: The height of the image in pixels
@@ -58,6 +59,7 @@ Optional properties which should only be output when the required criteria is me
               "@type": "ImageObject",
               "@id": "https://www.example.com/#/schema/image/abc123",
               "url": "https://www.example.com/uploads/example-image.jpg",
+              "contentUrl": "https://www.example.com/uploads/example-image.jpg",
               "width": 250,
               "height": 250,
               "caption": "Example caption"
@@ -76,6 +78,7 @@ Optional properties which should only be output when the required criteria is me
               "@type": "ImageObject",
               "@id": "https://www.example.com/#/schema/image/abc123",
               "url": "https://www.example.com/uploads/example-image.jpg",
+              "contentUrl": "https://www.example.com/uploads/example-image.jpg",
               "caption": "Example caption",
               "inLanguage": "en-US",
               "width": 120,
