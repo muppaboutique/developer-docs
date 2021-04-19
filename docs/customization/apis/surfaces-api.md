@@ -23,6 +23,12 @@ This code immediately outputs the page's meta description:
 echo YoastSEO()->meta->for_current_page()->description;
 ```
 
+This code outputs the estimated reading time for the current page.
+
+```php
+echo (string) YoastSEO()->meta->for_current_page()->estimated_reading_time_minutes, " minutes";
+```
+
 The `current_page` surface exposes every bit of data we have on the current page, which all work in the same way; it's a long list:
 
 
@@ -71,6 +77,7 @@ The `current_page` surface exposes every bit of data we have on the current page
 | twitter_site | string | The Twitter card site reference for the current page. |
 | source | array | The source object for most of this page data. |
 | breadcrumbs | array | The breadcrumbs array for the current page. |
+| estimated_reading_time_minutes | int | The estimated reading time in minutes for the content. | 
 
 Whether you need the *OpenGraph description* or the *robots array*, this has you covered. Get used to opening your favorite IDE, typing `YoastSEO()->meta->for_current_page()->` and see the type hints for the exact bit of data you need.
 
