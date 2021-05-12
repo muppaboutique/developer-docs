@@ -57,12 +57,8 @@ Optional properties which should only be output when the required criteria is me
       "@graph": [
           {
               "@type": "ImageObject",
-              "@id": "https://www.example.com/#/schema/image/abc123",
-              "url": "https://www.example.com/uploads/example-image.jpg",
-              "contentUrl": "https://www.example.com/uploads/example-image.jpg",
-              "width": 250,
-              "height": 250,
-              "caption": "Example caption"
+              "@id": "https://www.example.com/uploads/example-image.jpg",
+              "contentUrl": "https://www.example.com/uploads/example-image.jpg"
           }
       ]
   }`}
