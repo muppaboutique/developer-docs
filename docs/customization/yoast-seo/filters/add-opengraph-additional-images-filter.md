@@ -4,7 +4,7 @@ title: Yoast SEO - Allows to add additional images to the Open Graph tags
 sidebar_label: Add additional images to the OpenGraph tags
 custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/filters/add-opengraph-additional-images-filter.md
 ---
-By default, Yoast SEO plugin allows to have one OpenGraph image in the page <head> element.
+By default, Yoast SEO plugin allows to have one OpenGraph image in the page `head` element.
 
 The `wpseo_add_opengraph_additional_images` filter allows to add additional images to the OpenGraph tags. Each image added through the filter will have `og:image`, `og:image:width` and `og:image:height` tags.
 
