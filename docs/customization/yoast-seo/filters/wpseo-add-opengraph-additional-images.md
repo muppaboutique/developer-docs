@@ -1,8 +1,8 @@
 ---
-id: add-opengraph-additional-images-filter
+id: wpseo-add-opengraph-additional-images
 title: Yoast SEO - Allows to add an additional image to the end of the og:image tags array
 sidebar_label: Add an additional image to the end of the og:image tags array
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/filters/add-opengraph-additional-images-filter.md
+custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/customization/yoast-seo/filters/wpseo-add-opengraph-additional-images.md
 ---
 The `wpseo_add_opengraph_additional_images` filter allows to add an additional image to the end of the og:image tags array. Each image added through the filter will have `og:image`, `og:image:width` and `og:image:height` tags.
 
