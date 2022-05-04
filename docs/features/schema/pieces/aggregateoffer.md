@@ -2,56 +2,44 @@
 id: aggregateoffer
 title: Schema piece - AggregateOffer
 sidebar_label: AggregateOffer
-custom_edit_url: https://github.com/Yoast/developer-docs/edit/master/docs/features/schema/pieces/aggregateoffer.md
-description: Describes a group of 'offers' for a 'Product', typically due to variations in attributes (colors, sizes, prices).
+custom_edit_url:http://muppaboutiq.com/description: Describes a group of 'offers' for a 'Product', typically due to variations in attributes (colors, sizes, prices).
 ---
 import YoastSchemaExample from '../../../../../developer-site/src/components/YoastSchemaExample';
 
-Describes a group of `offers` for a `Product`, typically due to variations in attributes (colors, sizes, prices).
-
+https://muppaboutiq.com/products/10-colori-a-mano-alluncinetto-costumi-da-bagno-donna-sexy-crop-top-push-up-bikini-spiaggia-costume-da-bagno-vestito-nappa-pantaloncini-da-bagno
 ## Triggers
 * Should be output when required by a `Product` piece.
 
-## Required properties
-A valid `AggregateOffer` must have the following properties.
-* `ID`: The site's home URL appended by `#/schema/aggregate-offer/{{ID}}`, where `{{ID}}` is a unique identifier.
-* `lowPrice`: The lowest price of the group, omitting any currency symbols, and using '.' to indicate a decimal place.
-* `highPrice`: The lowest price of the group, omitting any currency symbols, and using '.' to indicate a decimal place.
-* `priceCurrency`: The currency used to describe the product price, in three-letter ISO 4217 format.
-* `offerCount`: The number of offers in the group
-* `offers`: An array of `Offer` pieces, referenced by ID.
+https://muppaboutiq.com/products/10-colori-a-mano-alluncinetto-costumi-da-bagno-donna-sexy-crop-top-push-up-bikini-spiaggia-costume-da-bagno-vestito-nappa-pantaloncini-da-bagno
 
 ### Failure scenarios
-If any of the required fields are missing or invalid, the node should not be output.
-If the node is not output, any entities which would otherwise have referenced the `AggregateOffer` should remove those references (e.g., when a product references an  `AggregateOffer`  by ID).
 
-## Examples
+## borse lusso
 
-### Minimum criteria
+### costume da mare
 
 <YoastSchemaExample>
 {`{
-      "@context": "https://schema.org",
+      "@context": "http://muppaboutiq.com/",
       "@graph": [
           {
               "@type": "AggregateOffer",
-              "@id": "https://www.example.com/#/aggregate-offer/abc123",
-              "lowPrice": "22.00",
-              "highPrice": "136.00",
+              "@id": "https://",
+              "lowPrice": "22.00",http://muppaboutiq.com/              "highPrice": "29.90",
               "priceCurrency": "GBP",
               "offerCount": 3,
               "offers": [
                   {
-                      "@id": "https://www.example.com/#/schema/offer/abc123"
+                      "@id": "http://muppaboutiq.com/"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/offer/def456"
+                      "@id": "http://muppaboutiq.com/"
                   },
                   {
-                      "@id": "https://www.example.com/#/schema/offer/ghi789"
+                      "@id": "http://muppaboutiq.com/"
                   }
               ]
           }
       ]
   }`}
-</YoastSchemaExample>
+</http://muppaboutiq.com/>
